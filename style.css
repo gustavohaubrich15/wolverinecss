@@ -1,0 +1,143 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(216, 132, 132);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    position: fixed;
+    width: 280px;
+    height: 400px;
+}
+
+.face {
+    position: absolute;
+    top: 0;
+    background: #cfb629;
+    overflow: hidden;
+    width: 100%;
+    height: 400px;
+    border-radius: 40% / 30% 30% 70% 70%;
+}
+
+.masks {
+    display: flex;
+}
+
+.mask-right {
+    position: relative;
+    background: #0b032e;
+    width: 150px;
+    height: 200px;
+    bottom: -100px;
+    z-index: 2;
+    left: 150px;
+    border-radius: 76% 26% 100% 0% / 100% 66% 34% 0%;
+}
+
+
+.mask-right-top {
+    position: relative;
+    background: #0b032e;
+    width: 100px;
+    height: 300px;
+    left: 77px;
+    bottom: 116px;
+    border-radius: 76% 26% 100% 0% / 100% 66% 34% 0%;
+}
+
+.mask-right-bottom {
+    position: relative;
+    background: #0b032e;
+    width: 65px;
+    height: 136px;
+    left: 57px;
+    bottom: 140px;
+    border-radius: 58% 42% 75% 25% / 0% 0% 100% 100%;
+}
+
+
+.mask-left {
+    position: relative;
+    background: #0b032e;
+    width: 150px;
+    height: 200px;
+    bottom: -100px;
+    transform: scaleX(-1);
+    z-index: 2;
+    left: -140px;
+    border-radius: 76% 26% 100% 0% / 100% 66% 34% 0%;
+}
+
+.mask-left-top {
+    position: relative;
+    background: #0b032e;
+    width: 100px;
+    height: 300px;
+    left: 77px;
+    bottom: 116px;
+    border-radius: 76% 26% 100% 0% / 100% 66% 34% 0%;
+}
+
+.mask-left-bottom {
+    position: relative;
+    background: #0b032e;
+    width: 65px;
+    height: 136px;
+    left: 57px;
+    bottom: 140px;
+    border-radius: 58% 42% 75% 25% / 0% 0% 100% 100%;
+}
+
+.mouth {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background-color: #dfad8c;
+}
+
+
+
+.eyes {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 180px;
+    height: 50px;
+    z-index: 3;
+    top: 45%;
+    left: 51%;
+    transform: translate(-50%);
+}
+
+.eyes::before,
+.eyes::after {
+    content: "";
+    position: relative;
+    background: white;
+    width: 50px;
+    height: 15px;
+    border-radius: 15% 15% 50% 50%;
+    transform: perspective(6px) rotateY(5deg) rotateZ(10deg);
+}
+
+.eyes::after {
+    transform: perspective(6px) rotateY(-5deg) rotateZ(-10deg);
+}
+
+.eyes:hover {
+    filter: drop-shadow(0 0 5px aqua);
+}
